@@ -1,9 +1,9 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function Index ({breads}) {
+function Index ({breads, title}) {
     return (
-      <Default>
+      <Default title={title}>
         <h2>Index Page</h2>
         {/* This is a JSX comment. */}
         {/* <p>I have {breads[0].name} bread!</p> */}
@@ -13,7 +13,7 @@ function Index ({breads}) {
                  return (
                  <li key={index}>
                      <a href={`/breads/${index}`}>
-                     {bread.name}
+                        {bread.name}
                      </a>
                  </li>
                  )
